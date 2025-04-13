@@ -1,13 +1,16 @@
 import turtle
 
-# initial position
+# Set up turtle
+turtle.speed(3)
 turtle.penup()
 turtle.goto(10, -10)  
 turtle.pendown()
 
-# Flower base
+# Entire flower filled red
 turtle.fillcolor("red")
 turtle.begin_fill()
+
+# Flower base
 turtle.circle(10, 180)
 turtle.circle(25, 110)
 turtle.left(50)
@@ -32,11 +35,8 @@ turtle.left(155)
 turtle.circle(150, 80)
 turtle.left(50)
 turtle.circle(150, 90)
-turtle.end_fill()
 
-# Petal 1 - fill red
-turtle.fillcolor("red")
-turtle.begin_fill()
+# Seamless petals directly added
 turtle.left(150)
 turtle.circle(-90, 70)
 turtle.left(20)
@@ -44,22 +44,22 @@ turtle.circle(75, 105)
 turtle.setheading(60)
 turtle.circle(80, 98)
 turtle.circle(-90, 40)
-turtle.end_fill()
 
-# Petal 2 - fill red
-turtle.fillcolor("red")
-turtle.begin_fill()
 turtle.left(180)
 turtle.circle(90, 40)
 turtle.circle(-80, 98)
+
+# Close the fill
+turtle.setheading(-83)
 turtle.end_fill()
 
-# Stem and Leaves
-turtle.setheading(-83)
+# Stem
 turtle.fd(30)
 turtle.left(90)
 turtle.fd(25)
 turtle.left(45)
+
+# Leaves 1
 turtle.fillcolor("green")
 turtle.begin_fill()
 turtle.circle(-80, 90)
@@ -74,6 +74,7 @@ turtle.fd(85)
 turtle.left(90)
 turtle.fd(80)
 
+# Leaves 2
 turtle.right(90)
 turtle.right(45)
 turtle.fillcolor("green")
