@@ -1,18 +1,17 @@
 import turtle
 
 def draw_flower():
-    turtle.speed(2)  # Moderate speed
+    turtle.speed(2)
     turtle.bgcolor("white")
     turtle.color("red")
 
-    # Move to starting position
+    # Move to starting point for flower (centered above stalk)
     turtle.penup()
-    turtle.setheading(90)
-    turtle.fd(200)
+    turtle.goto(0, 100)  # Center of flower
     turtle.setheading(0)
     turtle.pendown()
 
-    # Draw flower (petal)
+    # Draw flower petals
     turtle.fillcolor("red")
     turtle.begin_fill()
     turtle.circle(10,180)
@@ -41,13 +40,16 @@ def draw_flower():
     turtle.circle(150,90)
     turtle.end_fill()
 
-    # Second petal curve to return to stem
+    # Curve back toward center for stem base
     turtle.left(180)
     turtle.circle(90,40)
     turtle.circle(-80,98)
 
-    # Draw stem (straight down)
+    # Draw stem starting directly beneath flower
+    turtle.penup()
+    turtle.goto(0, 100)  # Re-align to center
     turtle.setheading(-90)
+    turtle.pendown()
     turtle.color("green")
     turtle.pensize(10)
     turtle.forward(200)
@@ -61,9 +63,11 @@ def draw_flower():
     turtle.circle(-50, 90)
     turtle.end_fill()
 
-    # Position for right leaf
+    # Move to position for right leaf
     turtle.setheading(-90)
-    turtle.fd(60)
+    turtle.penup()
+    turtle.forward(60)
+    turtle.pendown()
     turtle.begin_fill()
     turtle.right(45)
     turtle.circle(50, 90)
