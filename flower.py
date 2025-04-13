@@ -34,7 +34,9 @@ turtle.left(50)
 turtle.circle(150, 90)
 turtle.end_fill()
 
-# Petal 1
+# Petal 1 - fill red
+turtle.fillcolor("red")
+turtle.begin_fill()
 turtle.left(150)
 turtle.circle(-90, 70)
 turtle.left(20)
@@ -42,14 +44,18 @@ turtle.circle(75, 105)
 turtle.setheading(60)
 turtle.circle(80, 98)
 turtle.circle(-90, 40)
+turtle.end_fill()
 
-# Petal 2
+# Petal 2 - fill red
+turtle.fillcolor("red")
+turtle.begin_fill()
 turtle.left(180)
 turtle.circle(90, 40)
 turtle.circle(-80, 98)
-turtle.setheading(-83)
+turtle.end_fill()
 
-# Leaves 1
+# Stem and Leaves
+turtle.setheading(-83)
 turtle.fd(30)
 turtle.left(90)
 turtle.fd(25)
@@ -60,6 +66,7 @@ turtle.circle(-80, 90)
 turtle.right(90)
 turtle.circle(-80, 90)
 turtle.end_fill()
+
 turtle.right(135)
 turtle.fd(60)
 turtle.left(180)
@@ -67,7 +74,6 @@ turtle.fd(85)
 turtle.left(90)
 turtle.fd(80)
 
-# Leaves 2
 turtle.right(90)
 turtle.right(45)
 turtle.fillcolor("green")
@@ -76,6 +82,7 @@ turtle.circle(80, 90)
 turtle.left(90)
 turtle.circle(80, 90)
 turtle.end_fill()
+
 turtle.left(135)
 turtle.fd(60)
 turtle.left(180)
@@ -83,5 +90,5 @@ turtle.fd(60)
 turtle.right(90)
 turtle.circle(200, 60)
 
-# End drawing
+turtle.hideturtle()
 turtle.done()
